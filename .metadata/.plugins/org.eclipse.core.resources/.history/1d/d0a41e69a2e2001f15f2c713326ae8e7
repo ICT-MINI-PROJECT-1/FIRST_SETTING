@@ -1,0 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+    window.setTimeout(() => {
+        //document.body.classList.remove('fade');
+        document.getElementById("fade").style.opacity=1;
+    });
+});
+
+let lastScrollY=0;
+
+window.addEventListener("scroll touchmove mousewheel", (e) => {
+	let curScrollY = window.scrollY;
+	
+	if(lastScrollY < curScrollY) {
+		if(curScrollY < 20) {
+			window.scrollTo({top:500,left:0,behavior:'smooth'});
+		}
+	}
+	
+	lastScrollY = curScrollY;
+});

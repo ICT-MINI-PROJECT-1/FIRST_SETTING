@@ -1,0 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+    window.setTimeout(() => {
+        //document.body.classList.remove('fade');
+        document.getElementById("fade").style.opacity=1;
+    });
+});
+
+window.onscroll = function(){
+	console.log(window.scrollY);
+	if(window.scrollY==0) {
+		window.scrollTO(0,80);
+	}
+}

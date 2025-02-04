@@ -1,0 +1,5 @@
+package com.sc.main.vo;
+
+public class UserVO {
+
+}

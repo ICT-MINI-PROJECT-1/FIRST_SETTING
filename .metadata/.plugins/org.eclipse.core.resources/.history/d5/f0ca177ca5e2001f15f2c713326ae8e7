@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+    window.setTimeout(() => {
+        //document.body.classList.remove('fade');
+        document.getElementById("fade").style.opacity=1;
+    });
+});
+
+let lastScrollY=0;
+
+window.addEventListener("scroll", (e) => {
+	let curScrollY = window.scrollY;
+	
+	if(lastScrollY < curScrollY) {
+		if(curScrollY >= 15) {
+			document.getElementsByClassName("header")[0].style.top='-80px';
+			//window.scrollTo({top:80,left:0,behavior:'smooth'});
+			document.getElementsByClassName("nav")[0].style.top='0px';
+		}
+	}
+	
+	lastScrollY = curScrollY;
+});

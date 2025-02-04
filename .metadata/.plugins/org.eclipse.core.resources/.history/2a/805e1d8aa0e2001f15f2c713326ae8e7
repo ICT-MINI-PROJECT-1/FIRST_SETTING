@@ -1,0 +1,7 @@
+console.log("!!");
+document.addEventListener('DOMContentLoaded', () => {
+    window.setTimeout(() => {
+        //document.body.classList.remove('fade');
+        document.getElementById("fade").style.opacity=1;
+    });
+});

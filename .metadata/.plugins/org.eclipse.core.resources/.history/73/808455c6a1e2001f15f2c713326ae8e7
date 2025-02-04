@@ -1,0 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+    window.setTimeout(() => {
+        //document.body.classList.remove('fade');
+        document.getElementById("fade").style.opacity=1;
+    });
+});
+
+let lastScrollY=0;
+
+window.addEventListener("scroll", (e) => {
+	let curScrollY = window.scrollY;
+	
+	if(lastScrollY < curScrollY) {
+		console.log(curScrollY);
+	}
+	
+	lastScrollY = curScrollY;
+});
+
+/*
+window.onscroll = function(){
+	console.log(window.scrollY);
+	if(window.scrollY<10) {
+		window.scrollTo(0,80);
+	}
+}
+*/
